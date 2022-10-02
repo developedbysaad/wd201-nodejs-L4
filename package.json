@@ -1,0 +1,25 @@
+{
+  "name": "wd201-nodejs-l4",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "jest",
+    "prepare": "husky install"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/developedbysaad/wd201-nodejs-L4.git"
+  },
+  "author": "Mohd Saad <saad@developedbysaad.com>",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/developedbysaad/wd201-nodejs-L4/issues"
+  },
+  "homepage": "https://github.com/developedbysaad/wd201-nodejs-L4#readme",
+  "devDependencies": {
+    "husky": "^8.0.1",
+    "jest": "^29.1.1",
+    "lint-staged": "^13.0.3"
+  }
+}
