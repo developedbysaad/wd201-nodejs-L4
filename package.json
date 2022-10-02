@@ -7,6 +7,12 @@
     "test": "jest",
     "prepare": "husky install"
   },
+  "lint-staged": {
+    "*.js": [
+      "eslint",
+      "prettier --write ."
+    ]
+  },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/developedbysaad/wd201-nodejs-L4.git"
@@ -18,8 +24,10 @@
   },
   "homepage": "https://github.com/developedbysaad/wd201-nodejs-L4#readme",
   "devDependencies": {
+    "eslint": "^8.24.0",
     "husky": "^8.0.1",
     "jest": "^29.1.1",
-    "lint-staged": "^13.0.3"
+    "lint-staged": "^13.0.3",
+    "prettier": "^2.7.1"
   }
 }
