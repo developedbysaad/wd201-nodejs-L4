@@ -21,16 +21,16 @@ const todoList = () => {
     return all.filter((todo) => todo.dueDate > today);
   };
 
-  const toDisplayableList = (list) => {
-    return list
-      .map(
-        (todo) =>
-          `${todo.completed ? "[x]" : "[ ]"} ${todo.title} ${
-            todo.dueDate === today ? "" : todo.dueDate
-          }`
-      )
-      .join("\n");
-  };
+  // const toDisplayableList = (list) => {
+  //   return list
+  //     .map(
+  //       (todo) =>
+  //         `${todo.completed ? "[x]" : "[ ]"} ${todo.title.trim()} ${
+  //           todo.dueDate === today ? "" : todo.dueDate
+  //         }`
+  //     )
+  //     .join("\n");
+  // };
 
   return {
     all,
@@ -39,7 +39,6 @@ const todoList = () => {
     overdue,
     dueToday,
     dueLater,
-    toDisplayableList,
   };
 };
 
