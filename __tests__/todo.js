@@ -1,8 +1,8 @@
-/* eslint-disable no-undef */
 const todoList = require("../todo");
 
 const { all, markAsComplete, add, overdue, dueToday, dueLater } = todoList();
 
+/* eslint-disable no-undef */
 describe("TodoList Test Suite", () => {
   beforeAll(() => {
     add({
@@ -29,7 +29,7 @@ describe("TodoList Test Suite", () => {
   });
 
   test("should return overdue items", () => {
-    expect(overdue.length).toEqual(0);
+    expect(overdue().length).toEqual(0);
     const today = new Date();
     const oneDay = 60 * 60 * 24 * 1000;
     add({
@@ -41,7 +41,7 @@ describe("TodoList Test Suite", () => {
     expect(overdueItems.length).toBe(1);
   });
   test("Should return items due today", () => {
-    expect(dueToday.length).toEqual(0);
+    expect(dueToday().length).toEqual(2);
     const today = new Date();
     add({
       title: "Due today item 3", //other 2 items are coming from "beforeAll" and "add a new todo" test case
@@ -52,7 +52,7 @@ describe("TodoList Test Suite", () => {
     expect(dueTodayItems.length).toBe(3);
   });
   test("Should return items due later", () => {
-    expect(dueLater.length).toEqual(0);
+    expect(dueLater().length).toEqual(0);
     const today = new Date();
     const oneDay = 60 * 60 * 24 * 1000;
     add({

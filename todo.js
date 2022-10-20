@@ -1,7 +1,7 @@
 /* eslint-disable no-undef */
 const todoList = () => {
   const today = new Date().toLocaleDateString("en-CA");
-  all = [];
+  const all = [];
   const add = (todoItem) => {
     all.push(todoItem);
   };
@@ -14,7 +14,7 @@ const todoList = () => {
   };
 
   const dueToday = () => {
-    return all.filter((todo) => todo.dueDate == today);
+    return all.filter((todo) => todo.dueDate === today);
   };
 
   const dueLater = () => {
@@ -26,7 +26,7 @@ const todoList = () => {
       .map(
         (todo) =>
           `${todo.completed ? "[x]" : "[ ]"} ${todo.title} ${
-            todo.dueDate == today ? "" : todo.dueDate
+            todo.dueDate === today ? "" : todo.dueDate
           }`
       )
       .join("\n");
