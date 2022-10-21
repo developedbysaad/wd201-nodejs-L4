@@ -42,11 +42,10 @@ describe("TodoList Test Suite", () => {
   });
   test("Should return items due today", () => {
     expect(dueToday().length).toEqual(2);
-    const today = new Date();
     add({
       title: "Due today item 3", //other 2 items are coming from "beforeAll" and "add a new todo" test case
       completed: false,
-      dueDate: new Date(today.getTime()).toLocaleDateString("en-CA"),
+      dueDate: new Date().toLocaleDateString("en-CA"),
     });
     let dueTodayItems = dueToday();
     expect(dueTodayItems.length).toBe(3);

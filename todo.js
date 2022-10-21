@@ -21,16 +21,17 @@ const todoList = () => {
     return all.filter((todo) => todo.dueDate > today);
   };
 
-  // const toDisplayableList = (list) => {
-  //   return list
-  //     .map(
-  //       (todo) =>
-  //         `${todo.completed ? "[x]" : "[ ]"} ${todo.title.trim()} ${
-  //           todo.dueDate === today ? "" : todo.dueDate
-  //         }`
-  //     )
-  //     .join("\n");
-  // };
+  // eslint-disable-next-line no-unused-vars
+  const toDisplayableList = (list) => {
+    return list
+      .map(
+        (todo) =>
+          `${todo.completed ? "[x]" : "[ ]"} ${todo.title.trim()} ${
+            todo.dueDate === today ? "" : todo.dueDate
+          }`
+      )
+      .join("\n");
+  };
 
   return {
     all,
